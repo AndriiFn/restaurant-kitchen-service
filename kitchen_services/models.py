@@ -18,6 +18,8 @@ class DishType(models.Model):
 
 class Cook(AbstractUser):
     years_of_experience = models.PositiveIntegerField(
+        null=True,
+        blank=True,
         validators=[MinValueValidator(0), MaxValueValidator(45)]
     )
 
