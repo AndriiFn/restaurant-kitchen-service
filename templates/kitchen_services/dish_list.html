@@ -2,11 +2,22 @@
 
 {% block content %}
   <h1>Dishes</h1>
-
-  <ul>
-    {% for dish in dish_list %}
-      <li><a href={% url 'kitchen_services:dish-detail' pk=dish.id %}>{{ dish.name }}</a> for {{ dish.price }} <strong>{{ dish.dish_type }}</strong></li>
-      <p>About {{ dish.name }}: {{ dish.description }}</p>
-    {% endfor %}
-  </ul>
+  {% if not dish_list %}
+    <p>There are no dishes unfortunately :(</p>
+  {% else %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Dish name</th>
+        <th>Price</th>
+      </tr>
+        {% for dish in dish_list %}
+          <tr>
+            <td><a href="{% url 'kitchen_services:dish-detail' pk=dish.id %}">{{ dish.id }}</a></td>
+            <td>{{ dish.name}}</td>
+            <td>{{ dish.price }}</td>
+          </tr>
+        {% endfor %}
+    </table>
+  {% endif %}
 {% endblock %}
