@@ -8,10 +8,10 @@
     {% elif cook.years_of_experience >= 5 %} skilled cook
     {% elif cook.years_of_experience >= 0 %} beginner cook {% endif %}
   </p>
-  <p>Number of dishes this cook can prepare: {{ cook.cooked_dishes.count }}</p>
   {% if cook.cooked_dishes.count == 0 %}
     <h5>This cook can't cook anything yet, but he's learning!</h5>
   {% else %}
+    <p>Number of dishes this cook can prepare: {{ cook.cooked_dishes.count }}</p>
     <h3>Dishes:</h3>
     <ul>
       {% for dish in cook.cooked_dishes.all %}
