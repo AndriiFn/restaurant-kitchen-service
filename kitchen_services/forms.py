@@ -13,7 +13,7 @@ class CookCreationForm(forms.ModelForm):
 
 class DishForm(forms.ModelForm):
     cooks = forms.ModelMultipleChoiceField(
-        queryset=get_user_model().objects.all(),
+        queryset=get_user_model().objects.exclude(is_superuser=True),
         widget=forms.CheckboxSelectMultiple,
     )
 
