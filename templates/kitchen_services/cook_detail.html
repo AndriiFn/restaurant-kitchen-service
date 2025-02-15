@@ -3,10 +3,15 @@
 {% block content %}
   <h1>Cook {{ cook.username }} Detail</h1>
   <p><strong>Full name: </strong>{{ cook.first_name }} {{ cook.last_name }}</p>
-  <p><strong>Years of experience: </strong>{{ cook.years_of_experience }} -
-    {% if cook.years_of_experience >= 10 %} highly experienced cook
-    {% elif cook.years_of_experience >= 5 %} skilled cook
-    {% elif cook.years_of_experience >= 0 %} beginner cook {% endif %}
+  <p><strong>Years of experience: </strong>
+    {% if not cook.years_of_experience %}
+      Beginner cook
+    {% else %}
+      {{ cook.years_of_experience }} -
+      {% if cook.years_of_experience >= 10 %} Highly experienced cook
+      {% elif cook.years_of_experience >= 5 %} Skilled cook
+      {% elif cook.years_of_experience >= 0 %} Beginner cook {% endif %}
+    {% endif %}
   </p>
   {% if cook.cooked_dishes.count == 0 %}
     <h5>This cook can't cook anything yet, but he's learning!</h5>
@@ -21,4 +26,5 @@
       {% endfor %}
     </ul>
   {% endif %}
+  <h2><a href="{% url 'kitchen_services:cook-delete' pk=cook.id %}">Delete</a></h2>
 {% endblock %}
