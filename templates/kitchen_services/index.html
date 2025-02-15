@@ -12,6 +12,6 @@
     <li>Number of Dishes: {{ num_dishes }}</li>
     <li>Number of Dish types: {{ num_dish_types }}</li>
     <li>Number of Cooks: {{ num_cooks }}</li>
-    <li>Number of Visits: {{ num_visits }}</li>
+    <li>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}</li>
   </ul>
 {% endblock %}
