@@ -5,7 +5,7 @@
 
   <ul>
     {% for dish in dish_list %}
-      <li>{{ dish.name }} for {{ dish.price }} <strong>{{ dish.dish_type }}</strong></li>
+      <li><a href={% url 'kitchen_services:dish-detail' pk=dish.id %}>{{ dish.name }}</a> for {{ dish.price }} <strong>{{ dish.dish_type }}</strong></li>
       <p>About {{ dish.name }}: {{ dish.description }}</p>
     {% endfor %}
   </ul>
