@@ -7,4 +7,4 @@ urlpatterns = [
     path("dishes/", DishListView.as_view(), name="dish-list"),
 ]
 
-app_name = "restaurant_services"
+app_name = "kitchen_services"
