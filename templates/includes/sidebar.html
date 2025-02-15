@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+  <ul class="sidebar-nav list-group">
+    <li>
+      <a href="{% url 'kitchen_services:index' %}">Home page</a>
+    </li>
+    <li>
+      <a href="{% url 'kitchen_services:dish-list' %}">All dishes</a>
+    </li>
+  </ul>
+{% endblock %}
