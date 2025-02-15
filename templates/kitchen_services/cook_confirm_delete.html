@@ -4,7 +4,8 @@
   <h1>Are you sure you want to delete the cook "{{ cook.username }}"?</h1>
   <form action="" method="post">
     {% csrf_token %}
-    <input type="submit" value="Yes, delete it" class="btn btn-danger">
+    <a href="{% url 'kitchen_services:cook-list' %}" class="btn btn-secondary">Cancel</a>
+    <input type="submit" value="Yes, delete the cook" class="btn btn-danger inline-form">
   </form>
-  <
+
 {% endblock %}
