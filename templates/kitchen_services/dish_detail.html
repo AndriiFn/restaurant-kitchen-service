@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>{{ dish.name }} Detail</h1>
+  <h1>{{ dish.name }} Detail
+    <a style="float: right" href="{% url 'kitchen_services:dish-update' pk=dish.id %}">Update</a>
+  </h1>
   <p><strong>Price: </strong>{{ dish.price }}</p>
   <p><strong>Dish type: </strong>{{ dish.dish_type }}</p>
   <p>{{ dish.description }}</p>
@@ -14,4 +16,5 @@
        {% endif %}
     </p>
   {% endfor %}
+  <h2><a href="{% url 'kitchen_services:dish-delete' pk=dish.id %}">Delete</a></h2>
 {% endblock %}
