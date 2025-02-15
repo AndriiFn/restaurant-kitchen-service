@@ -24,3 +24,9 @@ def index(request: HttpRequest) -> HttpResponse:
 
 class DishListView(generic.ListView):
     model = Dish
+
+
+class DishTypeListView(generic.ListView):
+    model = DishType
+    template_name = "kitchen_services/dish_type_list.html"
+    context_object_name = "dish_type_list"
