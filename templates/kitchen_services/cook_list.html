@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Our Cooks</h1>
+  {% if not cook_list %}
+    <p>There are no cooks unfortunately :(</p>
+  {% else %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Full name</th>
+        <th>Username</th>
+        <th>Years of experience</th>
+      </tr>
+        {% for cook in cook_list %}
+          {% if not cook.is_superuser %}
+          <tr>
+            <td>{{ cook.id }}</td>
+            <td>{{ cook.first_name }} {{ cook.last_name }}</td>
+            <td>{{ cook.username }}</td>
+            <td>{{ cook.years_of_experience|default:"0" }} year{{ cook.years_of_experience|pluralize }} of experience</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+    </table>
+  {% endif %}
+{% endblock %}
