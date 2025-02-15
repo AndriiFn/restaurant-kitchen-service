@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ dish.name }} Detail</h1>
+  <p><strong>Price: </strong>{{ dish.price }}</p>
+  <p><strong>Dish type: </strong>{{ dish.dish_type }}</p>
+  <p>{{ dish.description }}</p>
+  <h3>Cook{{ dish.cooks.all.count|pluralize }}:</h3>
+  {% for cook in dish.cooks.all %}
+    <hr>
+    <p>{{ cook.first_name }} {{ cook.last_name }}
+       {% if cook.years_of_experience %}
+         with {{ cook.years_of_experience|default:"0" }} year{{ cook.years_of_experience|pluralize }} of experience
+       {% endif %}
+    </p>
+  {% endfor %}
+{% endblock %}
