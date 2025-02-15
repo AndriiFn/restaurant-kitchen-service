@@ -11,8 +11,10 @@
   {% for cook in dish.cooks.all %}
     <hr>
     <p>{{ cook.first_name }} {{ cook.last_name }}
-       {% if cook.years_of_experience %}
+       {% if cook.years_of_experience >= 1 %}
          with {{ cook.years_of_experience|default:"0" }} year{{ cook.years_of_experience|pluralize }} of experience
+       {% elif cook.years_of_experience == 0 %}
+         - still mastering the basics, but the future looks delicious!
        {% endif %}
     </p>
   {% endfor %}
