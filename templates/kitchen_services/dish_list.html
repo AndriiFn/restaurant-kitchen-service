@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Dishes</h1>
+  <h1>Dishes <a style="float: right" href="{% url 'kitchen_services:dish-create' %}">+</a></h1>
   {% if not dish_list %}
     <p>There are no dishes unfortunately :(</p>
   {% else %}
