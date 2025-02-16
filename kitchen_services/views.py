@@ -5,7 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen_services.forms import CookCreationForm, DishForm, DishSearchForm, DishTypeSearchForm, CookSearchForm
+from kitchen_services.forms import CookCreationForm, DishForm, DishSearchForm, DishTypeSearchForm, CookSearchForm, \
+    DishTypeCreationForm
 from kitchen_services.models import DishType, Cook, Dish
 
 @login_required
@@ -91,6 +92,13 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         if form.is_valid():
             return queryset.filter(name__icontains=form.cleaned_data["name"])
         return queryset
+
+
+class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
+    model = DishType
+    form_class = DishTypeCreationForm
+    success_url = reverse_lazy("kitchen_services:dish-type-list")
+    template_name = "kitchen_services/dish_type_form.html"
 
 
 class CookListView(LoginRequiredMixin, generic.ListView):
