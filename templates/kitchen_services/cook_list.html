@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
   <h1>Our Cooks <a style="float: right" href="{% url 'kitchen_services:cook-create' %}">+</a></h1>
+  <form method="get" action="">
+    {{ search_form|crispy }}
+    <input type="submit" value="🔍" class="btn btn-secondary" >
+  </form>
   {% if not cook_list %}
     <p>There are no cooks unfortunately :(</p>
   {% else %}
