@@ -3,6 +3,10 @@
 
 {% block content %}
   <h1>Dish Types <a style="float: right" href="{% url 'kitchen_services:dish-type-create' %}">+</a></h1>
+  <form method="get" action="" class="form-inline">
+    {{ search_form|crispy }}
+    <input type="submit" value="🔍" class="btn btn-secondary" >
+  </form>
   {% if not dish_type_list %}
     <p>There are unfortunately no dish types :(</p>
   {% else %}
