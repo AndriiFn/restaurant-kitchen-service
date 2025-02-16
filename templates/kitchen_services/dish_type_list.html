@@ -2,18 +2,25 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>Dish types<a style="float: right" href="{% url 'kitchen_services:dish-type-create' %}">+</a></h1>
-    <form method="get" action="" class="form-inline">
-    {{ search_form|crispy }}
-    <input type="submit" value="🔍" class="btn btn-secondary" >
-  </form>
-  <ul>
-    {% if dish_type_list %}
-      {% for dish_type in dish_type_list %}
-        <li>{{ dish_type.name }}</li>
-      {% endfor %}
-    {% else %}
-      <p>Oops! It looks like there are no dish types available at the moment :(</p>
-    {% endif %}
-  </ul>
+  <h1>Dishes <a style="float: right" href="{% url 'kitchen_services:dish-type-create' %}">+</a></h1>
+  {% if not dish_type_list %}
+    <p>There are unfortunately no dish types :(</p>
+  {% else %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Dish Type name</th>
+        <th>Number of dishes</th>
+        <th>Delete</th>
+      </tr>
+        {% for dish_type in dish_type_list %}
+          <tr>
+            <td>{{ dish_type.id }}</td>
+            <td>{{ dish_type.name}}</td>
+            <td>{{ dish_type.dishes.all.count }}</td>
+            <td><</td>
+          </tr>
+        {% endfor %}
+    </table>
+  {% endif %}
 {% endblock %}

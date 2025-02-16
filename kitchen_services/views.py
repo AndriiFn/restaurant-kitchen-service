@@ -101,6 +101,13 @@ class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "kitchen_services/dish_type_form.html"
 
 
+class DishTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("kitchen_services:dish-type-list")
+    template_name = "kitchen_services/dish_type_confirm_delete.html"
+    context_object_name = "dish_type"
+
+
 class CookListView(LoginRequiredMixin, generic.ListView):
     model = Cook
     paginate_by = 5
@@ -127,12 +134,12 @@ class CookDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = Cook.objects.prefetch_related("cooked_dishes")
 
 
-class CooksCreateView(LoginRequiredMixin, generic.CreateView):
+class CookCreateView(LoginRequiredMixin, generic.CreateView):
     model = Cook
     form_class = CookCreationForm
     success_url = reverse_lazy("kitchen_services:cook-list")
 
 
-class CooksDeleteView(LoginRequiredMixin, generic.DeleteView):
+class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Cook
     success_url = reverse_lazy("kitchen_services:cook-list")
