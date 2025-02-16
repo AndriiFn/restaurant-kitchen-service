@@ -22,6 +22,18 @@ class DishForm(forms.ModelForm):
         fields = "__all__"
 
 
+class DishTypeForm(forms.ModelForm):
+    dishes = forms.ModelMultipleChoiceField(
+        queryset=Dish.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        required=False,
+    )
+
+    class Meta:
+        model = DishType
+        fields = "__all__"
+
+
 class DishTypeCreationForm(forms.ModelForm):
     dishes = forms.ModelMultipleChoiceField(
         queryset=Dish.objects.all(),

@@ -30,7 +30,8 @@
               <th>ID</th>
               <th>Dish Type Name</th>
               <th>Number of Dishes</th>
-              <th>Action</th>
+              <th>Update</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -39,6 +40,9 @@
                 <td>{{ dish_type.id }}</td>
                 <td>{{ dish_type.name }}</td>
                 <td>{{ dish_type.dishes.all.count }}</td>
+                <td>
+                  <a href="{% url 'kitchen_services:dish-type-update' pk=dish_type.id %}" class="btn btn-danger btn-sm">Update</a>
+                </td>
                 <td>
                   <a href="{% url 'kitchen_services:dish-type-delete' pk=dish_type.id %}" class="btn btn-danger btn-sm">Delete</a>
                 </td>
