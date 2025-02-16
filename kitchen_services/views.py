@@ -81,7 +81,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         context = super(DishTypeListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["name"] = name
-        context["search_form"] = DishSearchForm(
+        context["search_form"] = DishTypeSearchForm(
             initial={"name": name},
         )
         return context
