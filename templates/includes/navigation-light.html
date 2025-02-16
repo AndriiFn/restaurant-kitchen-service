@@ -39,18 +39,16 @@
                      target="_blank" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">PROJECT ON GITHUB</a>
                 </li>
 
-                {% if request.user.is_authenticated %}
-                  <li class="nav-item ms-lg-auto">
-                    <form method="post" action="{% url 'logout' %}">
-                      {% csrf_token %}
-                      <div class="d-flex justify-content-center align-items-center" style="height: 4vh;">
-                        <button type="button" class="btn btn-outline-danger btn-sm">Logout</button>
-                      </div>
-
-                    </form>
-                  </li>
-
-                {% endif %}
+              {% if request.user.is_authenticated %}
+                <li class="nav-item ms-lg-auto">
+                  <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-center align-items-center" style="height: 4vh;">
+                      <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                    </div>
+                  </form>
+                </li>
+              {% endif %}
                 
         </ul>
       </div>
