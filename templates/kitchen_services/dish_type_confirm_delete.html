@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete Dish Type</h1>
+  <br>
+  <h4>Are you sure you want to delete the dish type "{{ dish_type.name }}"?</h4>
+  <h6>all dishes related to the dish type wil be deleted as well.</h6>
+  <br>
+  <form action="" method="post">
+    {% csrf_token %}
+    <a href="{% url 'kitchen_services:dish-type-list' %}" class="btn btn-secondary">Cancel</a>
+    <input type="submit" value="Yes, delete it" class="btn btn-danger">
+  </form>
+{% endblock %}

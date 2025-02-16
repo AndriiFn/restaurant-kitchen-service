@@ -18,7 +18,7 @@
             <td>{{ dish_type.id }}</td>
             <td>{{ dish_type.name}}</td>
             <td>{{ dish_type.dishes.all.count }}</td>
-            <td><</td>
+            <td><a href="{% url 'kitchen_services:dish-type-delete' pk=dish_type.id %}">Delete</a></td>
           </tr>
         {% endfor %}
     </table>
