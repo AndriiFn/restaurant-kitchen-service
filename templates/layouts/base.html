@@ -3,7 +3,7 @@
 * Material Kit 2 - v3.0.0
 =========================================================
 
-* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Product Page:  https://www.creative-tim.com/product/material-kit
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 * Coded by www.creative-tim.com
 
@@ -22,7 +22,7 @@
   <title>
     Django Material Kit 2 - {% block title %}{% endblock %} | AppSeed
   </title>
-  
+
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
@@ -41,12 +41,14 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %} bg-gray-200">
+  {% include 'includes/navigation-light.html' %}
 
-  {% block content %}{% endblock content %}  
+  {% block content %}{% endblock content %}
 
-  {% include 'includes/footer.html' %} 
 
-  {% include 'includes/scripts.html' %} 
+  {% include 'includes/footer.html' %}
+
+  {% include 'includes/scripts.html' %}
 
    <!-- Specific Page JS goes HERE  -->
    {% block javascripts %}{% endblock javascripts %}

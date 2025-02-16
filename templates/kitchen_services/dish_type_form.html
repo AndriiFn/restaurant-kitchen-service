@@ -2,10 +2,25 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>Create Dish Type</h1>
-  <form action="" method="post" novalidate>
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" value="Submit" class="btn btn-outline-dark">
-  </form>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="display-4">{{ object|yesno:"Update, Create" }} Dish Type</h1>
+    </div>
+
+    <div class="card p-4 shadow-sm">
+      <form action="" method="post" novalidate>
+        {% csrf_token %}
+        <div class="form-group mb-3">
+          {{ form|crispy }}
+        </div>
+        <div class="form-group d-flex justify-content-between">
+          <!-- Cancel Button -->
+          <a href="{% url 'kitchen_services:dish-type-list' %}" class="btn btn-outline-secondary btn-lg w-48">Cancel</a>
+
+          <!-- Submit Button -->
+          <input type="submit" value="Submit" class="btn btn-primary btn-lg w-48">
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}
