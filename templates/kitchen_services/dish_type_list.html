@@ -2,7 +2,7 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>Dish types</h1>
+  <h1>Dish types<a style="float: right" href="{% url 'kitchen_services:dish-type-create' %}">+</a></h1>
     <form method="get" action="" class="form-inline">
     {{ search_form|crispy }}
     <input type="submit" value="🔍" class="btn btn-secondary" >
