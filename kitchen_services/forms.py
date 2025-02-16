@@ -33,3 +33,29 @@ class DishSearchForm(forms.Form):
             }
         )
     )
+
+
+class CookSearchForm(forms.Form):
+    last_name = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by a cook's last name",
+            }
+        )
+    )
+
+
+class DishTypeSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by dish type name",
+            }
+        )
+    )
