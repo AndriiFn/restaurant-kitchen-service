@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ## Run the Django development server
 python manage.py runserver
 
-=======
+------------------------------------------------------------------------------------------------
 ![image](https://github.com/user-attachments/assets/c59b60ae-0225-4d6b-aa10-1265e4caff76)
 ![image](https://github.com/user-attachments/assets/500a6b5e-2b47-4023-88c5-ec541c9cb1e9)
 ![image](https://github.com/user-attachments/assets/9e633906-4c57-43c6-998d-6b4b53a5a3a5)
