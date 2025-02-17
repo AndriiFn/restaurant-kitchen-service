@@ -5,9 +5,17 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen_services.forms import CookCreationForm, DishForm, DishSearchForm, DishTypeSearchForm, CookSearchForm, \
-    DishTypeCreationForm, DishTypeForm
 from kitchen_services.models import DishType, Cook, Dish
+from kitchen_services.forms import (
+    CookCreationForm,
+    DishForm,
+    DishSearchForm,
+    DishTypeSearchForm,
+    CookSearchForm,
+    DishTypeCreationForm,
+    DishTypeForm,
+)
+
 
 @login_required
 def index(request: HttpRequest) -> HttpResponse:
