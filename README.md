@@ -24,27 +24,27 @@ Track their experience and assign them to specific dishes.
 
 ## Installation
 
-# Clone the repository
+## Clone the repository
 git clone https://github.com/AndriiFn/restaurant-kitchen-service
 
-# Navigate to the project directory
+## Navigate to the project directory
 cd restaurant_kitchen_service
 
-# Create a virtual environment
+## Create a virtual environment
 python3 -m venv venv
 
-# Activate the virtual environment:
+## Activate the virtual environment:
 
-# On macOS/Linux:
+## On macOS/Linux:
 source venv/bin/activate
 
-# On Windows:
+## On Windows:
 venv\Scripts\activate
 
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# Run the Django development server
+## Run the Django development server
 python manage.py runserver
 
 =======
