@@ -1,5 +1,4 @@
 # restaurant-kitchen-service
-<<<<<<< HEAD
 
 Django Restaurant Services
 A Django-based website to manage the kitchen services of a restaurant. This includes handling the creation dishes, dish types and cooks, as well as tracking years of experience.
