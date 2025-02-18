@@ -17,7 +17,7 @@ Easily associate dishes with the appropriate dish types.
 Organize your menu by creating and managing various dish types.
 Add, update, or delete dish types to ensure a clear and well-structured menu.
 
-##Cook Management:
+## Cook Management:
 Manage the kitchen staff with ease.
 Create new cooks, or delete them when necessary.
 Track their experience and assign them to specific dishes.
