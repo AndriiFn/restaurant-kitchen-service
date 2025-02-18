@@ -3,20 +3,20 @@
 Django Restaurant Services
 A Django-based website to manage the kitchen services of a restaurant. This includes handling the creation dishes, dish types and cooks, as well as tracking years of experience.
 
-DB Structure
+# DB Structure
 ![img.png](img.png)
 
 # Features
-Dish Management:
+## Dish Management:
 Handle all aspects of dish creation, updating, and deleting.
 Update essential details like name, and pricing to keep your menu accurate and up-to-date.
 Easily associate dishes with the appropriate dish types.
 
-Dish Type Management:
+## Dish Type Management:
 Organize your menu by creating and managing various dish types.
 Add, update, or delete dish types to ensure a clear and well-structured menu.
 
-Cook Management:
+## Cook Management:
 Manage the kitchen staff with ease.
 Create new cooks, or delete them when necessary.
 Track their experience and assign them to specific dishes.
