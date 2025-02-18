@@ -6,21 +6,6 @@ A Django-based website to manage the kitchen services of a restaurant. This incl
 # DB Structure
 ![img.png](img.png)
 
-# Features
-## Dish Management:
-Handle all aspects of dish creation, updating, and deleting.
-Update essential details like name, and pricing to keep your menu accurate and up-to-date.
-Easily associate dishes with the appropriate dish types.
-
-## Dish Type Management:
-Organize your menu by creating and managing various dish types.
-Add, update, or delete dish types to ensure a clear and well-structured menu.
-
-## Cook Management:
-Manage the kitchen staff with ease.
-Create new cooks, or delete them when necessary.
-Track their experience and assign them to specific dishes.
-
 ## Installation
 
 ## Clone the repository
@@ -46,7 +31,22 @@ Track their experience and assign them to specific dishes.
 ## Run the Django development server
 `python manage.py runserver`
 
-------------------------------------------------------------------------------------------------
+# Features
+## Dish Management:
+Handle all aspects of dish creation, updating, and deleting.
+Update essential details like name, and pricing to keep your menu accurate and up-to-date.
+Easily associate dishes with the appropriate dish types.
+
+## Dish Type Management:
+Organize your menu by creating and managing various dish types.
+Add, update, or delete dish types to ensure a clear and well-structured menu.
+
+## Cook Management:
+Manage the kitchen staff with ease.
+Create new cooks, or delete them when necessary.
+Track their experience and assign them to specific dishes.
+
+## Demo
 ![image](https://github.com/user-attachments/assets/c59b60ae-0225-4d6b-aa10-1265e4caff76)
 ![image](https://github.com/user-attachments/assets/500a6b5e-2b47-4023-88c5-ec541c9cb1e9)
 ![image](https://github.com/user-attachments/assets/9e633906-4c57-43c6-998d-6b4b53a5a3a5)
