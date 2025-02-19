@@ -44,6 +44,7 @@ You can access the deployed application on Render using the link below:
 
 ## Loading Data (optional)
 To import data into your database, run this command:
+
 `python manage.py loaddata data.json`
 
 # Features
