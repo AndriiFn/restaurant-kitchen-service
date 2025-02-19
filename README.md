@@ -6,6 +6,17 @@ A Django-based website to manage the kitchen services of a restaurant. This incl
 # DB Structure
 ![img.png](img.png)
 
+# Restaurant Kitchen Service Deployed
+
+You can access the deployed application on Render using the link below:
+
+[Restaurant Kitchen Service on Render](https://restaurant-kitchen-service-u970.onrender.com)
+
+## Login Details
+
+- **Username**: admin
+- **Password**: QcTwcrq73
+
 ## Installation
 
 ## Clone the repository
@@ -30,6 +41,11 @@ A Django-based website to manage the kitchen services of a restaurant. This incl
 
 ## Run the Django development server
 `python manage.py runserver`
+
+## Loading Data (optional)
+To import data into your database, run this command:
+
+`python manage.py loaddata data.json`
 
 # Features
 ## Dish Management:
