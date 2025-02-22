@@ -117,6 +117,13 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 ASSETS_ROOT = "/static/assets"
 
 # Default primary key field type
